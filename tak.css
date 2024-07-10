@@ -1,0 +1,151 @@
+.main{
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    border-radius: 300px 40px 300px 40px;
+    background-color: aqua;
+}
+.grad {
+    height: 100px;
+    width: 300px;
+    background-image: linear-gradient(45deg, gray, black);
+    text-align:center;
+    
+}
+.over{
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+
+    p{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space:nowrap;
+    }
+}
+
+.trans {
+    background-color: aquamarine;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    transition: transform 2s;
+}
+.trans:hover{
+    transform: translate(100px,200px);
+}
+
+.anime {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 50%;
+    position: absolute;
+    animation: moveAndTransform 4s linear infinite;
+  }
+
+  @keyframes moveAndTransform {
+    0% {
+      left: 0;
+      top: 0;
+      transform: rotate(0deg);
+    }
+    50% {
+      left: 300px;
+      top: 0;
+      border-radius: 50%;
+      transform: rotate(0deg);
+    }
+    75% {
+      left: 300px;
+      top: 0;
+      border-radius: 0%;
+      transform: rotate(180deg);
+    }
+    100% {
+      left: 300px;
+      top: 0;
+      border-radius: 0%;
+      transform: rotate(360deg);
+    }
+  }
+
+.first{
+    margin:100px;
+    background-color: cadetblue;
+    height: 200px;
+    width: 200px;
+    position: relative;
+
+    &{
+        width: 50px;
+        height: 50px;
+        margin: 100px auto;
+    }
+
+    &:hover.second{
+        width: 100%;
+    }
+    &:hover.third{
+        width: 100%;
+    }
+    &:hover.fourth{
+        width: 100%;
+    }
+    &:hover.fifth{
+        width: 100%;
+    }
+
+.second{
+        position: absolute;
+        width: 0;
+        height: 100%;
+        right: 100%;
+        left: 100;
+        background-color: blueviolet;
+        transition: all 0.7s;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+.third{
+        position: absolute;
+        width: 0;
+        height: 100%;
+        right: 100;
+        left: 100%;
+        background-color: rgb(226, 43, 80);
+        transition: all 0.7s;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+.fourth{
+        position: absolute;
+        width: 100%;
+        height: 0;
+        top: 100;
+        bottom: 100%;
+        background-color: rgb(231, 121, 31);
+        transition: all 0.7s;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+.fifth{
+        position: absolute;
+        width: 100%;
+        height: 0;
+        bottom: 100;
+        top: 100%;
+        background-color: rgb(36, 246, 29);
+        transition: all 0.5s;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  }
